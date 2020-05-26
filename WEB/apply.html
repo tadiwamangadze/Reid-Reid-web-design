@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tad's professional web design">
+	  <meta name="keywords" content="Tadiwa Mangadze">
+  	<meta name="author" content="Tadiwa Mangadze">
+    <title>Tad's Web Design | Welcome</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
+  </head>
+  <body onload="startTime()">
+    <header>
+      <div class="container">
+        <div id="branding">
+          <!--a href="index.html"><img src="./img/logo.png"></a-->
+          <h1><a class="highlight" href="index.html">Reid</a></h1>
+          <h1 style="color:#000000; font-size:40px"><a href="index.html"><img style="width:55px;" align="inline" src="./img/logo.png" alt="reidnreid"></a></h1>
+          <h1><a class="highlight2" href="index.html">Reid</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="galleryHeader">
+        <script>
+            var myDate = new Date(); 
+            var myDay = myDate.getDay(); 
+            
+            // Array of days. 
+            var weekday = ['Sunday', 'Monday', 'Tuesday', 
+                'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+            document.write(weekday[myDay]); 
+
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+        </script>
+        <div id="txt"></div>
+    </section>
+
+    <section id="apply">
+
+        <div class="caption">
+          <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQiIwdq27fTdOIRBU_VWmivXMBQj0QfhSsvLSPOf8mapffwA/viewform?embedded=true" width="650" height="730" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
+        </div>
+    </section>
+
+    <footer>
+      <div style="color: black">
+        [&nbsp;&nbsp;
+          <a href="./index.html">Home</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+          <a href="./about.html">About</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+          <a href="./services.html">Services</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+          <a href="./gallery.html">Gallery</a>&nbsp;&nbsp;  
+        ]
+      </div>
+
+      <h1>Contact Us</h1>
+      <p>Phone: 770-889-2743<br>
+         Fax: 770-889-7943<br>
+         E-mail: info@reidandreidcontractors.com</p>
+
+      <p>7625 Majors Road<br>
+         Cumming, GA 30040<br></p>
+      <p style="color:#000000;">&copy; 2019 by tadiwa, All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
